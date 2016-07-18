@@ -1,0 +1,68 @@
+The recommendation from an earlier question on this was to use sys.getsizeof(), quoting:
+
+>>> import sys
+>>> x = 2
+>>> sys.getsizeof(x)
+14
+>>> sys.getsizeof(sys.getsizeof)
+32
+>>> sys.getsizeof('this')
+38
+>>> sys.getsizeof('this also')
+48
+You could take this approach:
+
+>>> import sys
+>>> import decimal
+>>>
+>>> d = {
+...     "int": 0,
+...     "float": 0.0,
+...     "dict": dict(),
+...     "set": set(),
+...     "tuple": tuple(),
+...     "list": list(),
+...     "str": "a",
+...     "unicode": u"a",
+...     "decimal": decimal.Decimal(0),
+...     "object": object(),
+... }
+>>> for k, v in sorted(d.iteritems()):
+...     print k, sys.getsizeof(v)
+...
+decimal 40
+dict 140
+float 16
+int 12
+list 36
+object 8
+set 116
+str 25
+tuple 28
+unicode 28
+2012-09-30
+
+python 2.7 (linux, 32-bit):
+
+decimal 36
+dict 136
+float 16
+int 12
+list 32
+object 8
+set 112
+str 22
+tuple 24
+unicode 32
+python 3.3 (linux, 32-bit)
+
+decimal 52
+dict 144
+float 16
+int 14
+list 32
+object 8
+set 112
+str 26
+tuple 24
+unicode 26

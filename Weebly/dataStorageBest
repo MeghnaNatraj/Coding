@@ -1,0 +1,3 @@
+NetApp Data Storage systems due to good reviews, cost-effective, reliability, scalability and popularity.
+
+In the context of Database management systems - MongoDB is ideal. Given the proliferation of data, scalability is a major issue and MongoDB can handle this better than most systems. We are also not required to have a fixed schema like SQL and data formats can change with time. It also has certain advantages for spatial analysis with features like geoJSON format to store data.This is very convenient for projects involving big data analysis with spatial data processing. eg. PASSAGE made by my Team and I at Georgia Tech use MongoDB for this very purpose.
