@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CTCI/.idea/CTCI.iml" filepath="$PROJECT_DIR$/../CTCI/.idea/CTCI.iml" />
+      <module fileurl="file://$USER_HOME$/Google Drive/GitHub/Coding/.idea/Coding.iml" filepath="$USER_HOME$/Google Drive/GitHub/Coding/.idea/Coding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../DL/.idea/DL.iml" filepath="$PROJECT_DIR$/../DL/.idea/DL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LeetCode/.idea/LeetCode.iml" filepath="$PROJECT_DIR$/../LeetCode/.idea/LeetCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LeetCode Extra/.idea/LeetCode Extra.iml" filepath="$PROJECT_DIR$/../LeetCode Extra/.idea/LeetCode Extra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Others/.idea/Others.iml" filepath="$PROJECT_DIR$/../Others/.idea/Others.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Trees.iml" filepath="$PROJECT_DIR$/.idea/Trees.iml" />
+    </modules>
+  </component>
+</project>

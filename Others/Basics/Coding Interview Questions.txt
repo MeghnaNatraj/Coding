@@ -1,0 +1,30 @@
+1) What are the 3 ways we can initialize dynamically allocated variables in java.
+
+This is not how you do things in Java. There are no dynamic variables in Java.
+Java variables have to be declared in the source code (*). Period.
+Depending on what you are trying to achieve, you should use an array, a List or a Map; e.g.
+
+int n[] = new int[3];
+for (int i = 0; i < 3; i++)
+{ n[i] = 5; }
+
+List<Integer> n = new ArrayList<Integer>();
+for (int i = 1; i < 4; i++)
+{ n.add(5); }
+
+Map<String, Integer> n = new HashMap<String, Integer>();
+for (int i = 1; i < 4; i++)
+{ n.put("n" + i, 5); }
+
+2) How big is the Heap?
+System.out.println("Heap size is " + Runtime.getRuntime().totalMemory());
+
+How much of the Heap is available?
+System.out.println("Available memory: " + Runtime.getRuntime().freeMemory());
+
+3) Java vs C ++ : Dynamic allocation of variables (check the big answer)
+
+
+
+
+
