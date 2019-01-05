@@ -1,3 +1,3 @@
 # Coding
 
-To practice for coding interviews.
+To practice for coding.
