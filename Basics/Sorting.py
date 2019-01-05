@@ -5,28 +5,27 @@ __author__ = 'Meghna'
 #       Average : O(n^2)
 #       Worst   : O(n^2)
 # Memory : O(1)
+# push the largest to the last
 def bubble_sort(A):
     for i in range(len(A)):
         for j in range(len(A)-i-1):
             if A[j+1] < A[j]:
                 A[j] , A[j+1] = A[j+1] , A[j]
 
-
 # SELECTION SORT
 # Runtime and Memory : Same as above
+# find the min idx and put in the beginning
 def selection_sort(A):
-    if not A:
-        return
-    else:
-        for i in range(0,len(A)):
-            min = i
-            for j in range(i+1,len(A)):
-                if A[j] < A[min] :
-                    min = j
-            A[i] , A[min] = A[min] , A[i]
+    for i in range(0,len(A)):
+        min = i
+        for j in range(i+1,len(A)):
+            if A[j] < A[min] :
+                min = j
+        A[i] , A[min] = A[min] , A[i]
 
 # INSERTION SORT
 # Runtime and Memory : Same as above
+# start from  1, 2, 3..travel back to 0, keep exchanging if it's min. This puts the min to 0, 1 2,..n-1..... 
 def insertion_sort(A):
     for i in range(1,len(A)):
         j=i
@@ -70,9 +69,9 @@ def quick_sort_simple(A):
         return quick_sort_simple([x for x in A[1:] if x < A[0]]) + [A[0]] + quick_sort_simple([x for x in A[1:] if x >= A[0]])
 
 # Normal
-def partition(A,begin,end):
+def partition(A, begin, end):
     pointer = begin + 1
-    for i in range(begin + 1,end+1):
+    for i in range(begin + 1, end + 1):
         if A[i] < A[begin]:
             A[pointer] , A[i] = A[i] , A[pointer]
             pointer += 1
@@ -104,18 +103,17 @@ print(A)
 def binarySearch(alist, item):
     first = 0
     last = len(alist)-1
-    found = False
 
-    while first<=last and not found:
+    while first<=last:
         midpoint = (first + last)//2
         if alist[midpoint] == item:
-            found = True
+            return True
         else:
                 if item < alist[midpoint]:
                     last = midpoint-1
                 else:
                     first = midpoint+1
-    return found
+    return False
 
 testlist = [0, 1, 2, 8, 13, 17, 19, 32, 42,]
 print(binarySearch(testlist, 3))
